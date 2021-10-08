@@ -3,8 +3,9 @@
 function bubbleSort(arr) {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
+      console.log(arr, arr[j], arr[j + 1]);
       if (arr[j] > arr[j + 1]) {
-        swap(arr, i, j);
+        swap(arr, j, j + 1);
       }
     }
   }
@@ -23,8 +24,9 @@ function swap(arr, idx1, idx2) {
 // const bubbleSort = (arr) => {
 //   for (let i = arr.length; i > 0; i--) {
 //     for (let j = 0; j < i - 1; j++) {
+//       console.log(arr, arr[j], arr[j + 1]);
 //       if (arr[j] > arr[j + 1]) {
-//         swap(arr, i, j);
+//         swap(arr, j, j + 1);
 //       }
 //     }
 //   }
@@ -37,17 +39,22 @@ function swap(arr, idx1, idx2) {
 // };
 
 // Most Optimal Solution
-// function bubbleSort(arr){
+// function bubbleSort(arr) {
 //   let noSwaps;
-//   for(let i=arr.length; i>0; i--){
-//       noSwaps = true;
-//       for(let j=0; j< i-1; j++){
-//           if(arr[j]>arr[j+1]){
-//               swap(arr, i, j)
-//               noSwaps = false
-//           }
+//   for (let i = arr.length; i > 0; i--) {
+//     noSwaps = true;
+//     for (let j = 0; j < i - 1; j++) {
+//       console.log(arr, arr[j], arr[j + 1]);
+//       if (arr[j] > arr[j + 1]) {
+//         swap(arr, j, j + 1);
+//         noSwaps = false;
 //       }
-//       if(noSwaps) break;
+//     }
+//     if (noSwaps) break;
 //   }
-//   return arr
+//   return arr;
 // }
+
+const arr1 = [34, 56, 22, 11, 9];
+
+console.log(bubbleSort(arr1));
