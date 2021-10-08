@@ -54,6 +54,8 @@ function swap(arr, idx1, idx2) {
 //   }
 //   return arr;
 // }
+//
+// test comment
 
 const arr1 = [34, 56, 22, 11, 9];
 
